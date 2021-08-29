@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <!-- import third-party icon library -->
+    <link rel="stylesheet" href="/assets/fonts/iconfont.css">
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo layui-hide-xs layui-bg-black">
+                <img src="/assets/images/logo.png" alt="">
+            </div>
+
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item layui-hide layui-show-md-inline-block">
+                    <!-- top profile photo -->
+                    <a href="javascript:;" class="userinfo">
+                        <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
+                        <span class="text-avatar ">A</span>
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">Your Profile</a></dd>
+                        <dd><a href="">Settings</a></dd>
+                        <dd><a href="">Sign out</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" id="btnLogout">
+                        <span class="iconfont icon-tuichu"> Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- left side profile  -->
+                <div class="userinfo">
+                    <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
+                    <span class="text-avatar layui-nav-img">A</span>
+
+                    <span id="welcome">Welcome XXX</span>
+                </div>
+                <!-- Left side nav bar -->
+                <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+                    <li class="layui-nav-item layui-this">
+                        <a href="/home/dashboard.html" target="fm">
+                            <span class="iconfont icon-home"> Home</span>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a class="" href="javascript:;">
+                            <span class="iconfont icon-16"> Your Article</span>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;">
+                                    <i class="layui-icon layui-icon-app"></i> Article Class
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;">
+                                    <i class="layui-icon layui-icon-app"></i>Article List
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;"><i class="layui-icon layui-icon-app"></i>Post Article
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <span class="iconfont icon-user"> Article List</span>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;">
+                                    <i class="layui-icon layui-icon-app"></i>General Info
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;">
+                                    <i class="layui-icon layui-icon-app"></i>Change profile
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="javascript:;">
+                                    <i class="layui-icon layui-icon-app"></i>Reset password
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- main content -->
+            <iframe name="fm" src="/home/dashboard.html" frameborder="0"></iframe>
+
+        </div>
+
+        <div class="layui-footer">
+            <!-- footer part -->
+            Footer
+        </div>
+    </div>
+    <!-- import layui  -->
+    <script src="/assets/lib/layui/layui.js"></script>
+    <!-- import jquery  -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- import baseAPI  -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- import index  -->
+    <script src="/assets/js/index.js"></script>
+</body>
+
+</html>
