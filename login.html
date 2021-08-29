@@ -6,10 +6,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- import layui style  -->
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <!-- import login style  -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
 </head>
 
 <body>
+    <!-- logo part  -->
+    <div class="layui-main">
+        <img src="/assets/images/logo.png" alt="">
+    </div>
 
+    <!-- login and register part  -->
+    <div class="loginAndRegBox">
+        <div class="title-box"></div>
+        <!-- login part  -->
+        <div class="login-box">
+            <form class="layui-form" action="" id="form_login">
+                <!-- username  -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" lay-reqText="Please input username" placeholder="Input username" autocomplete="off" class="layui-input">
+                </div>
+                <!-- password  -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" lay-reqText="Please input password" placeholder="Input password" autocomplete="off" class="layui-input">
+                </div>
+                <!-- login button  -->
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid  layui-btn-normal" lay-submit>Login</button>
+                </div>
+                <!-- register link  -->
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="link_reg">Register</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- register part  -->
+        <div class="reg-box">
+            <form class="layui-form" action="" id="form_reg">
+                <!-- username  -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="username" required lay-verify="required" lay-reqText="Please input username" placeholder="Input username" autocomplete="off" class="layui-input">
+                </div>
+                <!-- password  -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" required lay-verify="required|pwd" lay-reqText="Please input password" placeholder="Input password" autocomplete="off" class="layui-input">
+                </div>
+                <!-- confirm password  -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="repassword" required lay-verify="required|repwd" placeholder="Input password again" autocomplete="off" class="layui-input">
+                </div>
+                <!-- register button  -->
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid  layui-btn-normal" lay-submit>Register</button>
+                </div>
+                <!-- login link  -->
+                <div class="layui-form-item links">
+                    <a href="javascript:;" id="link_login">Login</a>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    <!-- import layui js -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- import JQuery  -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- import login.js -->
+    <script src="/assets/js/login.js"></script>
+    <!-- import baseAPI.js -->
+    <script src="/assets/js/baseAPI.js"></script>
 </body>
 
 </html>
