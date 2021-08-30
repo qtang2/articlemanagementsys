@@ -15,8 +15,7 @@ $.ajaxPrefilter(function(options) {
     //this will run no matter req succeed or failed
     //Set a complete attribute for all request
     options.complete = function(res) {
-        console.log("complete");
-        console.log(res);
+
         //prevent directlly change url to jump to main page
         if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
 

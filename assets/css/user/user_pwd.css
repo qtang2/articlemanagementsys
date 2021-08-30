@@ -1,0 +1,23 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 15px;
+    background: #f2f2f5;
+}
+
+.layui-form {
+    width: 550px;
+}
+
+.layui-input-block {
+    margin-left: 173px;
+}
+
+.layui-form-label {
+    width: 143px;
+    /* font-size: 12px; */
+}
