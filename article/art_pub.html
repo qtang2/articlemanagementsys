@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/lib/cropper/cropper.css" />
+    <link rel="stylesheet" href="/assets/css/article/art_pub.css">
+</head>
+
+<body>
+
+    <!-- card part  -->
+    <div class="layui-card">
+        <div class="layui-card-header">Post Article</div>
+        <div class="layui-card-body">
+            <form class="layui-form" id="form-pub">
+                <!-- title row  -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">Title</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="Input tile" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- category row  -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">Category</label>
+                    <div class="layui-input-block">
+                        <select name="cate_id" lay-verify="required">
+                        </select>
+                    </div>
+                </div>
+                <!-- article content row  -->
+                <div class="layui-form-item">
+                    <!-- left label -->
+                    <label class="layui-form-label">Content</label>
+                    <!-- set editor height -->
+                    <div class="layui-input-block" style="height: 400px;">
+                        <!-- editor text area -->
+                        <textarea name="content"></textarea>
+                    </div>
+                </div>
+                <!-- cover cropper part -->
+                <div class="layui-form-item">
+                    <!-- left label -->
+                    <label class="layui-form-label">Cover</label>
+                    <!-- Choose cover pic area -->
+                    <div class="layui-input-block cover-box">
+                        <!-- Left cropper -->
+                        <div class="cover-left">
+                            <img id="image" src="/assets/images/sample2.jpg" alt="" />
+                        </div>
+                        <!-- right preview and buttons -->
+                        <div class="cover-right">
+                            <!-- preview -->
+                            <div class="img-preview"></div>
+                            <!-- choose button -->
+                            <button type="button" class="layui-btn layui-btn-danger" id="chooseImage">Choose</button>
+                            <input type="file" id="coverFile" style="display: none;" accept="image/png,image/jpeg,image/gif">
+                        </div>
+                    </div>
+                </div>
+                <!-- post and save draft buttons -->
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit>Post</button>
+                        <button class="layui-btn layui-btn-primary" lay-submit id="btnSave2">Save Draft</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- template for category -->
+    <script type="text/html" id="tpl-cate">
+        <option value="">Choose Category</option>
+        {{each data}}
+        <option value="{{$value.Id}}">{{$value.name}}</option>
+        {{/each data}}
+    </script>
+
+    <!-- import layui  -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- import JQuery   -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- import baseAPI  -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- import web engine  -->
+    <script src="/assets/lib/template-web.js"></script>
+    <!-- import text editor -->
+    <script src="/assets/lib/tinymce/tinymce.min.js"></script>
+    <script src="/assets/lib/tinymce/tinymce_setup.js"></script>
+    <!-- import cropper -->
+    <script src="/assets/lib/cropper/Cropper.js"></script>
+    <script src="/assets/lib/cropper/jquery-cropper.js"></script>
+    <!-- import art_list  -->
+    <script src="/assets/js/article/art_pub.js"></script>
+</body>
+
+</html>

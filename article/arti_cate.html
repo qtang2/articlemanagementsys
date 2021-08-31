@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="/assets/css/article/art_cate.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">
+            <span>Manage Article Category</span>
+            <button type="button" class="layui-btn layui-btn-normal layui-btn-sm" id="btnAddCate"> New </button>
+        </div>
+        <div class="layui-card-body">
+            <table class="layui-table">
+                <!-- define width of each row  -->
+                <colgroup>
+                    <col>
+                    <col>
+                    <col width="200">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Alias</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- the template for table row -->
+    <script type="text/html" id="tpl-table">
+        {{each data}}
+        <tr>
+            <td>{{$value.name}}</td>
+            <td>{{$value.alias}}</td>
+            <td>
+                <button type="button" class="layui-btn layui-btn-normal layui-btn-xs btn-edit" data-id="{{$value.Id}}">Edit</button>
+                <button type="button" class="layui-btn layui-btn-danger layui-btn-xs btn-delete" data-id="{{$value.Id}}">Del</button>
+            </td>
+        </tr>
+        {{/each data}}
+    </script>
+
+    <!-- Set layer content for edit category -->
+    <script type="text/html" id="dialog-edit">
+        <form class="layui-form" id="form-edit" lay-filter="form-edit">
+            <!-- hidden input for data id -->
+            <input type="hidden" name="Id">
+            <div class="layui-form-item">
+                <label class="layui-form-label">Category</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="required" placeholder="Input category" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">Alias</label>
+                <div class="layui-input-block">
+                    <input type="text" name="alias" required lay-verify="required" placeholder="Input alias" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit>Save</button>
+                </div>
+            </div>
+        </form>
+    </script>
+
+    <!-- Set layer content for add new category -->
+    <script type="text/html" id="dialog-add">
+        <form class="layui-form" id="form-add">
+            <div class="layui-form-item">
+                <label class="layui-form-label">Category</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" required lay-verify="required" placeholder="Input category" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">Alias</label>
+                <div class="layui-input-block">
+                    <input type="text" name="alias" required lay-verify="required" placeholder="Input alias" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">Add</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">Reset</button>
+                </div>
+            </div>
+        </form>
+    </script>
+
+    <!-- import layui  -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- import JQuery   -->
+    <script src="/assets/lib/jquery.js"></script>
+
+    <!-- import baseAPI  -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- import template engine  -->
+    <script src="/assets/lib/template-web.js"></script>
+    <!-- import art_cate  -->
+    <script src="/assets/js/article/art_cate.js"></script>
+</body>
+
+</html>
