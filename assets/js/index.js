@@ -23,9 +23,6 @@ function getUserInfo() {
     $.ajax({
         url: "/my/userinfo",
         method: "GET",
-        headers: {
-            Authorization: localStorage.getItem("token") || ""
-        },
         success: function(res) {
             if (res.status !== 0) {
                 return layui.layer.msg("Failed to get user infor")
