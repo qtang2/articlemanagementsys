@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/api/login"
-  to = "http://api-breakingnews-web.itheima.net/api/login"
-  status = 200
-  force = true # COMMENT: ensure that we always redirect
