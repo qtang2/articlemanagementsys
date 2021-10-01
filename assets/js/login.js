@@ -62,7 +62,7 @@ $(function() {
             data: $(this).serialize(),
             success: function(res) {
                 if (res.status !== 0) {
-                    console.log(res.message);
+                    console.log(res);
                     return layer.msg("Login failed")
                 }
                 layer.msg("Login successfully")
