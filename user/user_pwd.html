@@ -2,60 +2,63 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- import layui style -->
-    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
-    <link rel="stylesheet" href="/assets/css/user/user_pwd.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Password</title>
+  <!-- import layui style -->
+  <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+  <link rel="stylesheet" href="/assets/css/user/user_pwd.css">
 </head>
 
 <body>
-    <!-- Card part -->
-    <div class="layui-card">
-        <div class="layui-card-header">Change Password</div>
-        <div class="layui-card-body">
-            <!-- Form part -->
-            <form class="layui-form" lay-filter="formUserInfo">
-                <!-- hidden input for id part -->
-                <input type="hidden" name="id" value="">
-                <div class="layui-form-item">
-                    <label class="layui-form-label">Old password</label>
-                    <div class="layui-input-block">
-                        <input type="password" name="oldPwd" required lay-verify="required|pwd" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">New password</label>
-                    <div class="layui-input-block">
-                        <input type="password" name="newPwd" required lay-verify="required|pwd|samePwd" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">Confirm new password</label>
-                    <div class="layui-input-block">
-                        <input type="password" name="rePwd" required lay-verify="required|pwd|rePwd" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <div class="layui-input-block">
-                        <button class="layui-btn" lay-submit lay-filter="formDemo">Change</button>
-                        <button type="reset" class="layui-btn layui-btn-primary" id="btnReset">Reset</button>
-                    </div>
-                </div>
-            </form>
+  <!-- Card part -->
+  <div class="layui-card">
+    <div class="layui-card-header">Change Password</div>
+    <div class="layui-card-body">
+      <!-- Form part -->
+      <form class="layui-form" lay-filter="formUserInfo">
+        <!-- hidden input for id part -->
+        <input type="hidden" name="id" value="">
+        <div class="layui-form-item">
+          <label class="layui-form-label">Old password</label>
+          <div class="layui-input-block">
+            <input type="password" name="oldPwd" required lay-verify="required|pwd" autocomplete="off"
+              class="layui-input">
+          </div>
         </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">New password</label>
+          <div class="layui-input-block">
+            <input type="password" name="newPwd" required lay-verify="required|pwd|samePwd" autocomplete="off"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">Confirm new password</label>
+          <div class="layui-input-block">
+            <input type="password" name="rePwd" required lay-verify="required|pwd|rePwd" autocomplete="off"
+              class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">Change</button>
+            <button type="reset" class="layui-btn layui-btn-primary" id="btnReset">Reset</button>
+          </div>
+        </div>
+      </form>
     </div>
+  </div>
 
-    <!-- import layui  -->
-    <script src="/assets/lib/layui/layui.js"></script>
-    <!-- import JQuery  -->
-    <script src="/assets/lib/jquery.js"></script>
-    <!-- import baseAPI  -->
-    <script src="/assets/js/baseAPI.js"></script>
-    <!-- import user_info  -->
-    <script src="/assets/js/user/user_pwd.js"></script>
+  <!-- import layui  -->
+  <script src="/assets/lib/layui/layui.js"></script>
+  <!-- import JQuery  -->
+  <script src="/assets/lib/jquery.js"></script>
+  <!-- import baseAPI  -->
+  <script src="/assets/js/baseAPI.js"></script>
+  <!-- import user_info  -->
+  <script src="/assets/js/user/user_pwd.js"></script>
 </body>
 
 </html>

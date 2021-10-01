@@ -28,7 +28,6 @@ $(function() {
         state: "" //article state
     }
 
-
     let layer = layui.layer
     let form = layui.form
     var laypage = layui.laypage;
@@ -40,11 +39,13 @@ $(function() {
 
     //Currently no data to fetch
     function initTable() {
+        console.log('qqqqqqqqqq  ', q);
         $.ajax({
-            method: "GET",
+            method: "GET", // change get from post to will work 
             url: "/my/article/list",
             data: q,
             success: function(res) {
+                console.log("resssssssssssssssssss", res);
                 if (res.status !== 0) {
                     return layer.msg("Get article list failed :(")
                 }
@@ -91,8 +92,8 @@ $(function() {
     //bind submit for search form
     $("#form-search").on("submit", function(e) {
         e.preventDefault()
-        let cate_id = $("[name=cate_id]").val()
-        let state = $("[name=state]").val()
+        let cate_id = $("[name=cate_id]").val() === 'defaultOption' ? '' : $("[name=cate_id]").val()
+        let state = $("[name=state]").val() === 'defaultOption' ? '' : $("[name=state]").val()
 
         q.cate_id = cate_id
         q.state = state
