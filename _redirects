@@ -1,2 +1,2 @@
 /my/userinfo http://api-breakingnews-web.itheima.net/my/userinfo 200!
-/login http://api-breakingnews-web.itheima.net/api/login 200!
+/api/login http://api-breakingnews-web.itheima.net/api/login 200!
