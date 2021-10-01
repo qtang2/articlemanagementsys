@@ -1,2 +1,1 @@
-/login http://api-breakingnews-web.itheima.net/api/login 200!
-/my/* http://api-breakingnews-web.itheima.net/my/:splat 200!
+/* http://api-breakingnews-web.itheima.net/:splat 200!
